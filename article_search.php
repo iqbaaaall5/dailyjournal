@@ -19,7 +19,7 @@ $hasil = $stmt->get_result();
     $no = 1;
         while ($row = $hasil->fetch_assoc()) {
 ?>
-		                    												<tr>
+    <tr>
     <td><?= $no++ ?></td>
     <td>
     <strong><?= $row["judul"] ?></strong>
