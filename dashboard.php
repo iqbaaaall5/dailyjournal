@@ -10,6 +10,16 @@ $hasil1 = $conn->query($sql1);
 $jumlah_article = $hasil1->num_rows; 
 
 print_r($jumlah_article);
+
+//query untuk mengambil data gallery
+$sql1 = "SELECT * FROM gallery ORDER BY tanggal DESC";
+$hasil1 = $conn->query($sql1);
+
+//menghitung jumlah baris data article
+$jumlah_gallery = $hasil1->num_rows; 
+
+print_r($jumlah_gallery);
+
 ?>
 <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center pt-4">
     <div class="col">
@@ -34,7 +44,7 @@ print_r($jumlah_article);
                         <h5 class="card-title"><i class="bi bi-camera"></i> Gallery</h5> 
                     </div>
                     <div class="p-3">
-                        <span class="badge rounded-pill text-bg-danger fs-2">0</span>
+                        <span class="badge rounded-pill text-bg-danger fs-2"><?php echo $jumlah_gallery; ?></span>
                     </div> 
                 </div>
             </div>
