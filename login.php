@@ -114,7 +114,7 @@ if(isset($_SESSION['username'])){
             //check apakah ada baris hasil data user yang cocok
             if (!empty($row)) { 
             //jika data ada (berhasil), alihkan ke halaman admin
-            $_SESSION["username"] = $username; //simpan variable username pd ssession
+            $_SESSION["username"] = $username; //simpan variable username pd ssession   
             header("location:admin.php");
             } else {
             //jika data tidak ada (gagal), tetap di halaman login
